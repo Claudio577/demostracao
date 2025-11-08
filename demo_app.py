@@ -16,9 +16,7 @@ st.set_page_config(
 def crop_white_borders(img_path):
     """Remove automaticamente bordas brancas ou vazias."""
     try:
-        # Nota: As imagens 'loguinnova.png' e 'calculo.png' devem estar disponíveis no mesmo diretório
         img = Image.open(img_path)
-        # Tenta pegar a cor do pixel (0, 0) para usar como fundo
         bg = Image.new(img.mode, img.size, img.getpixel((0, 0)))
         diff = ImageChops.difference(img, bg)
         bbox = diff.getbbox()
@@ -26,15 +24,39 @@ def crop_white_borders(img_path):
             img = img.crop(bbox)
         return img
     except FileNotFoundError:
-        # Adiciona uma mensagem de erro no Streamlit se a imagem não for encontrada
-        st.error(f"Erro: Imagem não encontrada em {img_path}. Certifique-se de que o arquivo existe.")
+        st.error(f"Erro: Imagem não encontrada em {img_path}.")
         return None
+
+
+# =====================================
+# 💼 SEÇÃO DE PORTFÓLIO PROFISSIONAL — (NO TOPO)
+# =====================================
+st.markdown("---")
+st.markdown("## 💼 Portfólio Profissional — *Claudio Hideki Yoshida*")
+st.markdown("""
+Sou **estudante e desenvolvedor na área de Inteligência Artificial aplicada (Machine Learning)**,  
+atualmente atuando em projetos de **IA Educacional, FinTech e Blockchain Inteligente**.
+
+Durante meu **estágio em Machine Learning**, desenvolvo **protótipos funcionais** que conectam modelos de IA  
+a sistemas reais, utilizando ferramentas como **Streamlit, Firebase, TensorFlow e Scikit-Learn**.
+
+💡 **Áreas de Atuação:**
+- Desenvolvimento de sistemas interativos baseados em *Machine Learning*  
+- Criação de dashboards e protótipos inteligentes com IA aplicada  
+- Aplicações educacionais e financeiras com foco em acessibilidade e impacto social  
+
+🧠 **Objetivo Profissional:**
+Consolidar experiência prática em **modelagem de IA, automação de processos inteligentes e análise de dados**.  
+Busco contribuir em equipes que unem **tecnologia, design e aprendizado de máquina** para criar soluções reais e éticas.
+
+📈 **Tecnologias Principais:**  
+Python · Streamlit · TensorFlow · Scikit-Learn · Firebase · FastAPI · Pandas · SQL · HTML/CSS
+""")
 
 # =====================================
 # CABEÇALHO PRINCIPAL E INTRODUÇÃO
 # =====================================
 with st.container():
-    # Cores alegres no título
     st.title(":blue[EduFin AI Cloud] — Inteligência Financeira com IA")
 
     st.markdown("""
@@ -59,16 +81,14 @@ with st.container():
 login_img = crop_white_borders("loguinnova.png")
 
 if login_img is not None:
-    # Redimensiona proporcionalmente
     base_width = 600
     w_percent = base_width / float(login_img.size[0])
     h_size = int(float(login_img.size[1]) * w_percent)
     login_img = login_img.resize((base_width, h_size), Image.Resampling.LANCZOS)
 
-    # Uso de st.columns para centralizar a imagem no layout wide (colunas [1, 2, 1])
     col1_login, col2_login, col3_login = st.columns([1, 2, 1])
 
-    st.write("") # Espaçamento
+    st.write("") 
     with col2_login:
         st.subheader(":green[Login] — Interface Aprimorada")
         st.image(login_img, use_column_width='always')
@@ -76,7 +96,7 @@ if login_img is not None:
 
 
 # =====================================
-# DEMONSTRAÇÃO DO ÍNDICE DE SAÚDE FINANCEIRA (CORES E PORCENTAGENS ORIGINAIS)
+# DEMONSTRAÇÃO DO ÍNDICE DE SAÚDE FINANCEIRA
 # =====================================
 st.write("")
 st.header(":red[Demonstração do Índice de Saúde Financeira]")
@@ -85,28 +105,21 @@ st.write("O sistema fornece um feedback imediato com base na sua situação, usa
 col_baixa, col_media, col_alta = st.columns(3)
 
 with col_baixa:
-    # Título em vermelho para Baixa Saúde Financeira
     st.markdown("#### :red[Baixa Saúde Financeira]")
-    # Porcentagem e Delta ORIGINAIS
     st.metric(label="Risco Alto", value="35%", delta="-15% (Ruim)", delta_color="inverse")
     st.write("Alerta: Seus gastos e/ou dívidas estão muito acima da sua renda. Ação imediata é necessária.")
 
 with col_media:
-    # Título em laranja/amarelo para Média Saúde Financeira
     st.markdown("#### :orange[Média Saúde Financeira]")  
-    # Porcentagem e Delta ORIGINAIS
     st.metric(label="Risco Moderado", value="65%", delta="+5% (Regular)", delta_color="off")
     st.write("Atenção: Você está no caminho certo, mas ainda pode otimizar seus gastos e aumentar a poupança.")
 
 with col_alta:
-    # Título em verde para Alta Saúde Financeira
     st.markdown("#### :green[Alta Saúde Financeira]")
-    # Porcentagem e Delta ORIGINAIS
     st.metric(label="Risco Baixo", value="95%", delta="+10% (Excelente)", delta_color="normal")
     st.write("Parabéns: Seu equilíbrio financeiro é excelente! Foque em estratégias de investimento de longo prazo.")
     
-st.write("") # Espaçamento
-
+st.write("")
 
 # =====================================
 # SEÇÕES 1, 2 E 3 — Layout de "Cartões" em 3 Colunas
@@ -114,7 +127,6 @@ st.write("") # Espaçamento
 st.header(":orange[Visão Geral, Funcionamento e Design]")
 st.write("Conheça os pilares do **EduFin AI Cloud** e como ele transforma a educação financeira.")
 
-# Organiza os 3 tópicos iniciais em 3 colunas para um layout dinâmico horizontal
 col_visao, col_funciona, col_design = st.columns(3)
 
 with col_visao:
@@ -142,11 +154,10 @@ with col_design:
 st.write("")
 
 # =====================================
-# SEÇÃO 4 — SIMULAÇÃO INTERATIVA (Texto e Imagem Lado a Lado)
+# SEÇÃO 4 — SIMULAÇÃO INTERATIVA
 # =====================================
 st.header(":violet[Simulação Interativa e Impacto de Decisão]")
 
-# Uso de colunas para apresentar texto e imagem lado a lado (ajuste a proporção [2, 3])
 col_texto_calc, col_img_calc = st.columns([2, 3])
 
 with col_texto_calc:
@@ -163,13 +174,11 @@ calc_img = crop_white_borders("calculo.png")
 
 with col_img_calc:
     if calc_img is not None:
-        # Largura ajustada para 450px
         base_width = 450 
         w_percent = base_width / float(calc_img.size[0])
         h_size = int(float(calc_img.size[1]) * w_percent)
         calc_img = calc_img.resize((base_width, h_size), Image.Resampling.LANCZOS)
         
-        # Uso de colunas internas para centralizar a imagem menor na coluna
         _, col_center, _ = st.columns([1, 4, 1]) 
         with col_center:
             st.image(calc_img, caption="Tela de Simulação — EduFin AI Cloud", use_column_width='always')
@@ -177,7 +186,7 @@ with col_img_calc:
 st.write("")
 
 # =====================================
-# SEÇÃO 5 E 6 — OBJETIVO E CONCLUSÕES (Lado a Lado)
+# SEÇÃO 5 E 6 — OBJETIVO E CONCLUSÕES
 # =====================================
 col_objetivo, col_conclusoes = st.columns(2)
 
@@ -186,7 +195,11 @@ with col_objetivo:
     st.markdown("""
     O EduFin AI Cloud busca **democratizar o acesso à educação financeira**.  
     Ele ajuda o usuário a entender conceitos como:
-    - **Equilíbrio entre ganhos e gastos** - **Importância de poupar e investir** - **Efeitos das dívidas** - **Planejamento financeiro pessoal** É ideal para **escolas, universidades e projetos sociais**, onde o aprendizado acontece de forma **visual e participativa**.
+    - **Equilíbrio entre ganhos e gastos**  
+    - **Importância de poupar e investir**  
+    - **Efeitos das dívidas**  
+    - **Planejamento financeiro pessoal**  
+    É ideal para **escolas, universidades e projetos sociais**, onde o aprendizado acontece de forma **visual e participativa**.
     """)
 
 with col_conclusoes:
