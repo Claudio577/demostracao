@@ -33,7 +33,7 @@ def crop_white_borders(img_path):
 # CABEÇALHO PRINCIPAL E INTRODUÇÃO
 # =====================================
 with st.container():
-    # Uso de Markdown colorido para o título
+    # Cores alegres no título
     st.title(":blue[EduFin AI Cloud] — Inteligência Financeira com IA")
 
     st.markdown("""
@@ -67,7 +67,7 @@ if login_img is not None:
     # Uso de st.columns para centralizar a imagem no layout wide (colunas [1, 2, 1])
     col1_login, col2_login, col3_login = st.columns([1, 2, 1])
 
-    st.write("") # Adiciona um pequeno espaço
+    st.write("") # Espaçamento
     with col2_login:
         st.subheader(":green[Login] — Interface Aprimorada")
         st.image(login_img, use_column_width='always')
@@ -75,9 +75,38 @@ if login_img is not None:
 
 
 # =====================================
-# SEÇÕES 1, 2 E 3 — Layout de "Cartões" em 3 Colunas
+# DEMONSTRAÇÃO DO ÍNDICE DE SAÚDE FINANCEIRA
 # =====================================
 st.write("")
+st.header(":red[Demonstração do Índice de Saúde Financeira]")
+st.write("O sistema fornece um feedback imediato com base na sua situação, usando cores para indicar o nível de saúde financeira (st.metric).")
+
+col_baixa, col_media, col_alta = st.columns(3)
+
+with col_baixa:
+    st.markdown("#### Baixa Saúde Financeira")
+    # delta_color="inverse" deixa a métrica em vermelho se o delta for negativo
+    st.metric(label="Risco Alto", value="35%", delta="-15% (Ruim)", delta_color="inverse")
+    st.write("Alerta: Seus gastos e/ou dívidas estão muito acima da sua renda. Ação imediata é necessária.")
+
+with col_media:
+    st.markdown("#### Média Saúde Financeira")
+    # delta_color="off" mantém a cor neutra (cinza)
+    st.metric(label="Risco Moderado", value="65%", delta="+5% (Regular)", delta_color="off")
+    st.write("Atenção: Você está no caminho certo, mas ainda pode otimizar seus gastos e aumentar a poupança.")
+
+with col_alta:
+    st.markdown("#### Alta Saúde Financeira")
+    # delta_color="normal" deixa a métrica em verde se o delta for positivo
+    st.metric(label="Risco Baixo", value="95%", delta="+10% (Excelente)", delta_color="normal")
+    st.write("Parabéns: Seu equilíbrio financeiro é excelente! Foque em estratégias de investimento de longo prazo.")
+    
+st.write("") # Espaçamento
+
+
+# =====================================
+# SEÇÕES 1, 2 E 3 — Layout de "Cartões" em 3 Colunas
+# =====================================
 st.header(":orange[Visão Geral, Funcionamento e Design]")
 st.write("Conheça os pilares do **EduFin AI Cloud** e como ele transforma a educação financeira.")
 
@@ -165,5 +194,3 @@ with col_conclusoes:
     - Geração de **recomendações personalizadas** para o usuário;  
     - Integração com **painéis para educadores e mentores**.  
     """)
-
-# O rodapé e as linhas horizontais foram removidos.
