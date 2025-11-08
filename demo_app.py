@@ -23,36 +23,6 @@ def crop_white_borders(img_path):
     return img
 
 # =====================================
-# 🎨 ESTILO DRIBBBLE / MODERNO
-# =====================================
-st.markdown("""
-<style>
-body {
-    background-color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    color: #222;
-}
-h1, h2, h3, h4 {
-    font-weight: 600;
-}
-img {
-    border-radius: 10px;
-}
-.section {
-    padding: 3rem 0;
-    border-bottom: 1px solid #eee;
-}
-.section h2 {
-    color: #222;
-}
-.section p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-</style>
-""", unsafe_allow_html=True)
-
-# =====================================
 # 🧭 CABEÇALHO PRINCIPAL
 # =====================================
 st.title("💡 EduFin AI Cloud — Inteligência Financeira com IA")
@@ -70,37 +40,33 @@ Com o EduFin, o objetivo é trazer esses conceitos para o **cotidiano de forma s
 """)
 
 # =====================================
-# 🖼️ IMAGEM DE LOGIN (cortada e centralizada)
+# 🖼️ IMAGEM DE LOGIN (loguinnova.png)
 # =====================================
-login_img = crop_white_borders("login.png")
+login_img = crop_white_borders("loguinnova.png")
 
-# Redimensiona proporcionalmente (ajuste natural)
+# Redimensiona proporcionalmente
 base_width = 600
 w_percent = base_width / float(login_img.size[0])
 h_size = int(float(login_img.size[1]) * w_percent)
 login_img = login_img.resize((base_width, h_size), Image.Resampling.LANCZOS)
 
-# Centraliza e exibe
 st.markdown("<div style='text-align:center;'>", unsafe_allow_html=True)
 st.image(login_img, caption="Tela de Login — EduFin AI Cloud", use_column_width=False)
-st.caption("Interface de autenticação simples e acessível para todos os usuários.")
+st.caption("Interface de autenticação aprimorada — simples, acessível e moderna.")
 st.markdown("</div>", unsafe_allow_html=True)
 
 # =====================================
 # 🧩 SEÇÃO 1 — VISÃO GERAL
 # =====================================
-st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.header("📘 Visão Geral")
 st.write("""
 O **EduFin AI Cloud** foi desenvolvido para **ensinar conceitos de educação financeira** de forma prática e intuitiva.  
 Com ele, qualquer pessoa pode compreender rapidamente **como está sua saúde financeira** e **como melhorar suas finanças pessoais**.
 """)
-st.markdown("</div>", unsafe_allow_html=True)
 
 # =====================================
 # 🧮 SEÇÃO 2 — COMO FUNCIONA
 # =====================================
-st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.header("⚙️ Como Funciona")
 st.write("""
 1. O usuário informa dados simples: **renda, gastos, dívidas, poupança e investimentos**.  
@@ -109,23 +75,19 @@ st.write("""
 
 Essa abordagem torna o aprendizado **interativo e acessível** — ideal para quem está começando no tema finanças pessoais.
 """)
-st.markdown("</div>", unsafe_allow_html=True)
 
 # =====================================
 # 🎨 SEÇÃO 3 — DESIGN EDUCACIONAL
 # =====================================
-st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.header("🎨 Design Educacional")
 st.write("""
 O layout foi projetado para **facilitar o aprendizado visual**.  
 Cores, ícones e controles deslizantes tornam o uso **leve e divertido**, incentivando o usuário a testar diferentes cenários financeiros e **aprender com o resultado**.
 """)
-st.markdown("</div>", unsafe_allow_html=True)
 
 # =====================================
 # 🧠 SEÇÃO 4 — SIMULAÇÃO INTERATIVA (CÁLCULO)
 # =====================================
-st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.header("📱 Simulação Interativa")
 st.write("""
 A principal tela do EduFin permite **simular situações reais**:
@@ -136,7 +98,6 @@ A principal tela do EduFin permite **simular situações reais**:
 Essas simulações ajudam o usuário a entender de forma prática o **impacto de suas decisões no futuro financeiro**.
 """)
 
-# Imagem do cálculo (cortada e redimensionada)
 calc_img = crop_white_borders("calculo.png")
 
 base_width = 700
@@ -147,12 +108,10 @@ calc_img = calc_img.resize((base_width, h_size), Image.Resampling.LANCZOS)
 st.markdown("<div style='text-align:center;'>", unsafe_allow_html=True)
 st.image(calc_img, caption="Tela de Simulação — EduFin AI Cloud", use_column_width=False)
 st.markdown("</div>", unsafe_allow_html=True)
-st.markdown("</div>", unsafe_allow_html=True)
 
 # =====================================
 # 📘 SEÇÃO 5 — OBJETIVO EDUCACIONAL
 # =====================================
-st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.header("🎯 Objetivo Educacional")
 st.write("""
 O EduFin AI Cloud busca **democratizar o acesso à educação financeira**.  
@@ -164,12 +123,10 @@ Ele ajuda o usuário a entender conceitos como:
 
 É ideal para **escolas, universidades e projetos sociais**, onde o aprendizado acontece de forma **visual e participativa**.
 """)
-st.markdown("</div>", unsafe_allow_html=True)
 
 # =====================================
 # 📈 SEÇÃO 6 — CONCLUSÕES
 # =====================================
-st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.header("📈 Conclusões e Próximos Passos")
 st.write("""
 O **EduFin AI Cloud** mostra como a tecnologia pode **tornar a educação financeira acessível e prática**.  
@@ -178,5 +135,3 @@ Próximos passos incluem:
 - Geração de **recomendações personalizadas** para o usuário;  
 - Integração com **painéis para educadores e mentores**.  
 """)
-st.markdown("</div>", unsafe_allow_html=True)
-
