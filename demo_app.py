@@ -165,9 +165,3 @@ with col_conclusoes:
     - Geração de **recomendações personalizadas** para o usuário;  
     - Integração com **painéis para educadores e mentores**.  
     """)
-
-# =====================================
-# RODAPÉ
-# =====================================
-st.markdown("---")
-st.markdown("<div style='text-align:center; color: gray; font-size: small;'>Desenvolvido com e Streamlit. | **EduFin AI Cloud** © 2025</div>", unsafe_allow_html=True)
