@@ -37,7 +37,7 @@ st.markdown("""
 Sou **estudante e desenvolvedor na área de Inteligência Artificial aplicada (Machine Learning)**,  
 atualmente atuando em projetos de **IA Educacional, FinTech e Blockchain Inteligente**.
 
-Durante meu **curso em Machine Learning**, desenvolvo **protótipos funcionais** que conectam modelos de IA  
+No **curso em Machine Learning**, desenvolvo **protótipos funcionais** que conectam modelos de IA  
 a sistemas reais, utilizando ferramentas como **Streamlit, Firebase, TensorFlow e Scikit-Learn**.
 
 **Áreas de Atuação:**
