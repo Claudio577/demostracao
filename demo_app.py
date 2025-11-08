@@ -45,10 +45,10 @@ img {
 st.title("💡 EduFin AI Cloud — Inteligência Financeira com IA")
 st.write("Aplicativo educativo que ajuda pessoas a **entender e melhorar sua vida financeira**, com apoio de **Inteligência Artificial** e uma interface simples.")
 
-# Imagem principal — direto do repositório GitHub
+# Imagem principal: tela de login
 st.image(
-    "https://raw.githubusercontent.com/Claudio577/demostracao/main/edufin-cloud-v2-kzfj7wlptvvrnqoxcwmmrt.streamlit.app_.png",
-    caption="Tela principal do EduFin AI Cloud",
+    "https://raw.githubusercontent.com/Claudio577/demostracao/main/login.png",
+    caption="Tela de Login — EduFin AI Cloud",
     use_column_width=True
 )
 
@@ -69,9 +69,9 @@ st.markdown("</div>", unsafe_allow_html=True)
 st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.header("⚙️ Como Funciona")
 st.write("""
-1. O usuário insere informações básicas: **renda, gastos, dívidas e investimentos**.  
-2. A IA faz um cálculo simples e gera um **índice de saúde financeira**.  
-3. O resultado é exibido em **cores e mensagens claras**, mostrando se a situação está boa, regular ou preocupante.  
+1. O usuário insere informações básicas: **renda, gastos, dívidas, poupança e investimentos**.  
+2. A IA calcula um **índice de saúde financeira**.  
+3. O resultado é exibido com **cores e mensagens claras**, mostrando se a situação está boa, regular ou preocupante.  
 
 Tudo isso acontece em tempo real, com uma linguagem acessível — perfeita para quem está **começando a aprender sobre finanças pessoais**.
 """)
@@ -84,17 +84,17 @@ st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.header("🎨 Design Educacional")
 st.write("""
 O layout do EduFin foi pensado para **facilitar o aprendizado visual**.  
-Cores, ícones e sliders interativos tornam o processo de entendimento **leve, intuitivo e motivador** — ideal para cursos, oficinas e programas de capacitação financeira.
+Cores, ícones e controles interativos tornam o processo de aprendizado **leve, intuitivo e motivador** — ideal para cursos, oficinas e projetos de capacitação financeira.
 """)
 st.markdown("</div>", unsafe_allow_html=True)
 
 # =====================================
-# 🧠 SEÇÃO 4 — SIMULAÇÃO INTERATIVA
+# 🧠 SEÇÃO 4 — SIMULAÇÃO INTERATIVA (CÁLCULO)
 # =====================================
 st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.header("📱 Simulação Interativa")
 st.write("""
-A interface permite que o usuário **simule diferentes cenários financeiros**:
+A interface principal permite que o usuário **simule diferentes cenários financeiros**:
 - O que acontece se eu gastar menos?  
 - E se eu guardar mais todo mês?  
 - Como as dívidas afetam meu equilíbrio financeiro?
@@ -102,9 +102,10 @@ A interface permite que o usuário **simule diferentes cenários financeiros**:
 Essas simulações mostram de forma prática o **impacto das decisões diárias** sobre a saúde financeira.
 """)
 
+# Imagem completa do app com o cálculo
 st.image(
-    "https://raw.githubusercontent.com/Claudio577/demostracao/main/edufin-cloud-v2-kzfj7wlptvvrnqoxcwmmrt.streamlit.app_.png",
-    caption="Simulação interativa — EduFin AI Cloud",
+    "https://raw.githubusercontent.com/Claudio577/demostracao/main/calculo.png",
+    caption="Tela completa de simulação — EduFin AI Cloud",
     use_column_width=True
 )
 st.markdown("</div>", unsafe_allow_html=True)
@@ -115,14 +116,14 @@ st.markdown("</div>", unsafe_allow_html=True)
 st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.header("🎯 Objetivo Educacional")
 st.write("""
-O EduFin AI Cloud foi criado com o propósito de **democratizar o acesso à educação financeira**.  
+O EduFin AI Cloud foi criado para **democratizar o acesso à educação financeira**.  
 Ele ajuda o usuário a compreender conceitos como:
 - Equilíbrio entre ganhos e gastos  
 - Importância de poupar  
 - Efeitos das dívidas  
-- Planejamento para o futuro  
+- Planejamento financeiro  
 
-Ideal para **escolas, cursos e projetos sociais**, onde o foco é **aprender fazendo**.
+Ideal para **escolas, cursos e projetos sociais**, com foco em **aprender fazendo**.
 """)
 st.markdown("</div>", unsafe_allow_html=True)
 
@@ -132,21 +133,11 @@ st.markdown("</div>", unsafe_allow_html=True)
 st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.header("📈 Conclusões e Próximos Passos")
 st.write("""
-O **EduFin AI Cloud** prova que é possível usar tecnologia para **tornar a educação financeira acessível e divertida**.  
+O **EduFin AI Cloud** mostra como a tecnologia pode tornar a **educação financeira acessível e divertida**.  
 Próximos passos incluem:
-- Expansão do cálculo de IA com mais variáveis financeiras,  
-- Geração automática de **recomendações personalizadas**,  
-- E integração com **painéis de acompanhamento** para professores e mentores.  
+- Expansão do modelo de IA com novas variáveis,  
+- Geração de **recomendações personalizadas**,  
+- Integração com **painéis de acompanhamento** para professores e mentores.  
 """)
 st.markdown("</div>", unsafe_allow_html=True)
-
-# =====================================
-# 🙌 RODAPÉ
-# =====================================
-st.markdown("""
----
-### 🙏 Obrigado por acompanhar!
-💬 Entre em contato: **claudio.y@hotmail.com**  
-© 2025 EduFin AI Cloud — Educação Financeira para Todos 💰
-""")
 
