@@ -32,7 +32,7 @@ def crop_white_borders(img_path):
 # 💼 SEÇÃO DE PORTFÓLIO PROFISSIONAL — (NO TOPO)
 # =====================================
 st.markdown("---")
-st.markdown("## 💼 Portfólio Profissional — *Claudio Hideki Yoshida*")
+st.markdown("## Portfólio Profissional — *Claudio Hideki Yoshida*")
 st.markdown("""
 Sou **estudante e desenvolvedor na área de Inteligência Artificial aplicada (Machine Learning)**,  
 atualmente atuando em projetos de **IA Educacional, FinTech e Blockchain Inteligente**.
@@ -40,16 +40,16 @@ atualmente atuando em projetos de **IA Educacional, FinTech e Blockchain Intelig
 Durante meu **estágio em Machine Learning**, desenvolvo **protótipos funcionais** que conectam modelos de IA  
 a sistemas reais, utilizando ferramentas como **Streamlit, Firebase, TensorFlow e Scikit-Learn**.
 
-💡 **Áreas de Atuação:**
+**Áreas de Atuação:**
 - Desenvolvimento de sistemas interativos baseados em *Machine Learning*  
 - Criação de dashboards e protótipos inteligentes com IA aplicada  
 - Aplicações educacionais e financeiras com foco em acessibilidade e impacto social  
 
-🧠 **Objetivo Profissional:**
+**Objetivo Profissional:**
 Consolidar experiência prática em **modelagem de IA, automação de processos inteligentes e análise de dados**.  
 Busco contribuir em equipes que unem **tecnologia, design e aprendizado de máquina** para criar soluções reais e éticas.
 
-📈 **Tecnologias Principais:**  
+**Tecnologias Principais:**  
 Python · Streamlit · TensorFlow · Scikit-Learn · Firebase · FastAPI · Pandas · SQL · HTML/CSS
 """)
 
