@@ -6,12 +6,12 @@ from PIL import Image
 # ===============================
 st.set_page_config(
     page_title="EduFin AI Cloud — Sua Saúde Financeira com IA",
-    page_icon="💡",
+  
     layout="wide"
 )
 
 # ===============================
-# 🎨 Estilo visual tipo Dribbble (moderno e limpo)
+# Estilo visual tipo Dribbble (moderno e limpo)
 # ===============================
 st.markdown("""
 <style>
@@ -52,10 +52,10 @@ a:hover {
 """, unsafe_allow_html=True)
 
 # ===============================
-# 💡 Cabeçalho principal
+# Cabeçalho principal
 # ===============================
-st.title("💡 EduFin AI Cloud")
-st.subheader("Entenda sua vida financeira de forma simples e inteligente 💰")
+st.title(" EduFin AI Cloud")
+st.subheader("Entenda sua vida financeira de forma simples e inteligente ")
 st.write("""
 O **EduFin AI Cloud** é um aplicativo que ajuda você a **entender como está sua saúde financeira**.  
 Com ele, você insere informações básicas — como quanto ganha, quanto gasta, e quanto tem guardado —  
@@ -65,41 +65,41 @@ Tudo isso de forma **simples, visual e rápida**, sem precisar entender de econo
 """)
 
 # ===============================
-# 🧩 Explicação do Projeto
+# Explicação do Projeto
 # ===============================
 st.markdown("""
-## 🧠 Como o EduFin ajuda você
+## Como o EduFin ajuda você
 
 1. **Você informa seus dados** — sua renda, seus gastos e o quanto tem guardado.  
 2. **A IA faz os cálculos automaticamente** para entender se sua situação financeira está boa, regular ou preocupante.  
 3. **Você recebe um resultado visual**, com cores e mensagens que mostram o seu nível financeiro atual.  
 
-💬 Assim, você pode tomar decisões melhores sobre como usar o seu dinheiro —  
+Assim, você pode tomar decisões melhores sobre como usar o seu dinheiro —  
 como economizar, investir ou reduzir gastos.
 """)
 
 # ===============================
-# 📱 Mini Simulação Interativa
+#  Mini Simulação Interativa
 # ===============================
 st.markdown("---")
-st.header("🧩 Experimente Agora — Simule sua Situação Financeira")
+st.header(" Experimente Agora — Simule sua Situação Financeira")
 
 st.write("Use os controles abaixo para simular sua renda, gastos e investimentos e veja como sua saúde financeira muda:")
 
 col1, col2 = st.columns(2)
 
 with col1:
-    renda = st.slider("💰 Quanto você ganha por mês (R$)", 500, 20000, 4000)
-    gastos = st.slider("💳 Quanto você gasta por mês (R$)", 0, 20000, 2500)
-    dividas = st.slider("📉 Dívidas atuais (R$)", 0, 50000, 1000)
+    renda = st.slider("Quanto você ganha por mês (R$)", 500, 20000, 4000)
+    gastos = st.slider("Quanto você gasta por mês (R$)", 0, 20000, 2500)
+    dividas = st.slider("Dívidas atuais (R$)", 0, 50000, 1000)
 
 with col2:
-    poupanca = st.slider("🏦 Dinheiro guardado (R$)", 0, 50000, 2000)
-    investimentos = st.slider("📈 Investimentos (R$)", 0, 50000, 1500)
-    idade = st.slider("🎂 Sua idade", 18, 80, 30)
+    poupanca = st.slider("Dinheiro guardado (R$)", 0, 50000, 2000)
+    investimentos = st.slider("Investimentos (R$)", 0, 50000, 1500)
+    idade = st.slider("Sua idade", 18, 80, 30)
 
 # ===============================
-# 🧮 Cálculo simples (como se fosse a IA)
+# Cálculo simples (como se fosse a IA)
 # ===============================
 score = (renda - gastos - dividas + poupanca + investimentos) / (renda + 1)
 
@@ -113,10 +113,10 @@ else:
     st.success("🟢 Parabéns! Sua saúde financeira está **muito boa**.\n\nVocê tem um bom equilíbrio entre ganhos e gastos.")
 
 # ===============================
-# ✨ Explicação amigável do resultado
+#  Explicação amigável do resultado
 # ===============================
 st.info("""
-💬 **O que esse resultado significa?**  
+**O que esse resultado significa?**  
 - **Baixa:** talvez seja hora de rever seus gastos ou quitar dívidas.  
 - **Média:** você está indo bem, mas ainda pode melhorar.  
 - **Alta:** ótimo! Continue controlando seus gastos e poupando.  
@@ -126,7 +126,7 @@ sobre o futuro da sua vida financeira, mostrando o que pode acontecer se você c
 """)
 
 # ===============================
-# 📄 Rodapé
+# Rodapé
 # ===============================
 st.markdown("---")
 st.caption("© 2025 EduFin AI Cloud — Um projeto simples para ajudar pessoas a entenderem suas finanças 💡")
