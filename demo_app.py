@@ -2,11 +2,6 @@ import streamlit as st
 from PIL import Image
 
 # ===============================
-# ⚙️ Configurações da página
-# ===============================
-st.set_page_config(page_title="EduFin AI Cloud — Demo", page_icon="💡", layout="wide")
-
-# ===============================
 # 🎨 Estilo visual tipo Dribbble
 # ===============================
 st.markdown("""
