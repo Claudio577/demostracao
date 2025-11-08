@@ -92,7 +92,7 @@ with col_baixa:
     st.write("Alerta: Seus gastos e/ou dívidas estão muito acima da sua renda. Ação imediata é necessária.")
 
 with col_media:
-    # Título em laranja/amarelo para Média Saúde Financeira (usando 'orange')
+    # Título em laranja/amarelo para Média Saúde Financeira
     st.markdown("#### :orange[Média Saúde Financeira]")  
     # Porcentagem e Delta ORIGINAIS
     st.metric(label="Risco Moderado", value="65%", delta="+5% (Regular)", delta_color="off")
