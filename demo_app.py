@@ -33,7 +33,7 @@ def crop_white_borders(img_path):
 # =====================================
 # 🧭 CABEÇALHO PRINCIPAL E INTRODUÇÃO
 # =====================================
-st.title("💡 EduFin AI Cloud — Inteligência Financeira com IA")
+st.title("EduFin AI Cloud — Inteligência Financeira com IA")
 
 st.markdown("""
 O **EduFin AI Cloud** é um aplicativo educativo que une **educação financeira** e **inteligência artificial (IA)**.  
@@ -41,7 +41,7 @@ Ele foi criado para ajudar pessoas a **entenderem sua situação financeira** e 
 """)
 
 # Uso de st.expander para organizar a lista de habilidades de ML, tornando a introdução mais limpa.
-with st.expander("🚀 Habilidades de Machine Learning (ML) utilizadas e suas aplicações"):
+with st.expander("Habilidades de Machine Learning (ML) utilizadas e suas aplicações"):
     st.write("""
     As habilidades de **Machine Learning (ML)** utilizadas aqui podem ser aplicadas hoje em diversas áreas:
     - **Finanças pessoais e bancárias**, para prever gastos, detectar padrões de consumo e identificar riscos.  
@@ -77,7 +77,7 @@ st.divider() # Separador visual
 # =====================================
 # 🧩 SEÇÕES 1, 2 E 3 — ORGANIZAÇÃO EM COLUNAS PARA VISÃO GERAL
 # =====================================
-st.header("📘 Visão Geral e Conceitos Chave")
+st.header("Visão Geral e Conceitos Chave")
 
 # Organiza os 3 tópicos iniciais em 3 colunas para um layout dinâmico horizontal
 col_visao, col_funciona, col_design = st.columns(3)
@@ -109,7 +109,7 @@ st.divider()
 # =====================================
 # 🧠 SEÇÃO 4 — SIMULAÇÃO INTERATIVA (CÁLCULO)
 # =====================================
-st.header("📱 Simulação Interativa e Impacto de Decisão")
+st.header("Simulação Interativa e Impacto de Decisão")
 
 # Uso de colunas para apresentar texto e imagem lado a lado
 col_texto_calc, col_img_calc = st.columns([2, 3])
@@ -144,14 +144,14 @@ st.divider()
 col_objetivo, col_conclusoes = st.columns(2)
 
 with col_objetivo:
-    st.header("🎯 Objetivo Educacional")
+    st.header("Objetivo Educacional")
     st.write("""
     O EduFin AI Cloud busca **democratizar o acesso à educação financeira**. Ele ajuda o usuário a entender conceitos como:
     - **Equilíbrio entre ganhos e gastos** - **Importância de poupar e investir** - **Efeitos das dívidas** - **Planejamento financeiro pessoal** É ideal para **escolas, universidades e projetos sociais**, onde o aprendizado acontece de forma **visual e participativa**.
     """)
 
 with col_conclusoes:
-    st.header("📈 Conclusões e Próximos Passos")
+    st.header("Conclusões e Próximos Passos")
     st.write("""
     O **EduFin AI Cloud** demonstra como a tecnologia pode **tornar a educação financeira acessível e prática**.  
     Próximos passos planejados incluem:
