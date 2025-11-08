@@ -79,25 +79,25 @@ if login_img is not None:
 # =====================================
 st.write("")
 st.header(":red[Demonstração do Índice de Saúde Financeira]")
-st.write("O sistema fornece um feedback imediato com base na sua situação, usando cores para indicar o nível de saúde financeira (st.metric).")
+st.write("O sistema fornece um feedback imediato com base na sua situação, usando cores para indicar o nível de saúde financeira.")
 
 col_baixa, col_media, col_alta = st.columns(3)
 
 with col_baixa:
-    st.markdown("#### Baixa Saúde Financeira")
-    # delta_color="inverse" deixa a métrica em vermelho se o delta for negativo
+    # Título em vermelho para Baixa Saúde Financeira
+    st.markdown("#### :red[Baixa Saúde Financeira]")
     st.metric(label="Risco Alto", value="35%", delta="-15% (Ruim)", delta_color="inverse")
     st.write("Alerta: Seus gastos e/ou dívidas estão muito acima da sua renda. Ação imediata é necessária.")
 
 with col_media:
-    st.markdown("#### Média Saúde Financeira")
-    # delta_color="off" mantém a cor neutra (cinza)
+    # Título em laranja para Média Saúde Financeira (usando 'orange' ou 'yellow' conforme preferência)
+    st.markdown("#### :orange[Média Saúde Financeira]") 
     st.metric(label="Risco Moderado", value="65%", delta="+5% (Regular)", delta_color="off")
     st.write("Atenção: Você está no caminho certo, mas ainda pode otimizar seus gastos e aumentar a poupança.")
 
 with col_alta:
-    st.markdown("#### Alta Saúde Financeira")
-    # delta_color="normal" deixa a métrica em verde se o delta for positivo
+    # Título em verde para Alta Saúde Financeira
+    st.markdown("#### :green[Alta Saúde Financeira]")
     st.metric(label="Risco Baixo", value="95%", delta="+10% (Excelente)", delta_color="normal")
     st.write("Parabéns: Seu equilíbrio financeiro é excelente! Foque em estratégias de investimento de longo prazo.")
     
