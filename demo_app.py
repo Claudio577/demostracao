@@ -16,6 +16,7 @@ st.set_page_config(
 def crop_white_borders(img_path):
     """Remove automaticamente bordas brancas ou vazias."""
     try:
+        # NOTE: A imagem 'loguinnova.png' e 'calculo.png' devem estar disponíveis no mesmo diretório
         img = Image.open(img_path)
         # Tenta pegar a cor do pixel (0, 0) para usar como fundo
         bg = Image.new(img.mode, img.size, img.getpixel((0, 0)))
@@ -75,7 +76,7 @@ if login_img is not None:
 
 
 # =====================================
-# DEMONSTRAÇÃO DO ÍNDICE DE SAÚDE FINANCEIRA
+# DEMONSTRAÇÃO DO ÍNDICE DE SAÚDE FINANCEIRA (AJUSTADO)
 # =====================================
 st.write("")
 st.header(":red[Demonstração do Índice de Saúde Financeira]")
@@ -86,19 +87,22 @@ col_baixa, col_media, col_alta = st.columns(3)
 with col_baixa:
     # Título em vermelho para Baixa Saúde Financeira
     st.markdown("#### :red[Baixa Saúde Financeira]")
-    st.metric(label="Risco Alto", value="35%", delta="-15% (Ruim)", delta_color="inverse")
+    # Porcentagem baixa (ex: 20%) com delta negativo (vermelho)
+    st.metric(label="Risco Alto", value="20%", delta="-30% (Crítico)", delta_color="inverse")
     st.write("Alerta: Seus gastos e/ou dívidas estão muito acima da sua renda. Ação imediata é necessária.")
 
 with col_media:
-    # Título em laranja para Média Saúde Financeira (usando 'orange' ou 'yellow' conforme preferência)
-    st.markdown("#### :orange[Média Saúde Financeira]") 
-    st.metric(label="Risco Moderado", value="65%", delta="+5% (Regular)", delta_color="off")
+    # Título em laranja para Média Saúde Financeira 
+    st.markdown("#### :orange[Média Saúde Financeira]")  
+    # Porcentagem intermediária (ex: 55%) com delta neutro (off/cinza)
+    st.metric(label="Risco Moderado", value="55%", delta="+5% (Estável)", delta_color="off")
     st.write("Atenção: Você está no caminho certo, mas ainda pode otimizar seus gastos e aumentar a poupança.")
 
 with col_alta:
     # Título em verde para Alta Saúde Financeira
     st.markdown("#### :green[Alta Saúde Financeira]")
-    st.metric(label="Risco Baixo", value="95%", delta="+10% (Excelente)", delta_color="normal")
+    # Porcentagem alta (ex: 90%) com delta positivo (verde)
+    st.metric(label="Risco Baixo", value="90%", delta="+10% (Crescimento)", delta_color="normal")
     st.write("Parabéns: Seu equilíbrio financeiro é excelente! Foque em estratégias de investimento de longo prazo.")
     
 st.write("") # Espaçamento
