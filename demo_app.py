@@ -160,6 +160,3 @@ with col_conclusoes:
     - Integração com **painéis para educadores e mentores**.  
     """)
 
-# Adiciona um rodapé simples
-st.markdown("---")
-st.markdown("Desenvolvido com ❤️ e Streamlit. | **EduFin AI Cloud** © 2025")
