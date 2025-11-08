@@ -82,10 +82,6 @@ with col1:
     - **Scikit-Learn** (Pré-processamento)
     """)
 
-    st.markdown("---")
-    st.markdown("🌐 [Ver código no GitHub](https://github.com/seu-usuario/edufin-ai-cloud)")
-    st.markdown("📹 [Demonstração no YouTube](https://youtu.be/...)")
-
 # =========================
 # 🔹 Coluna 2 – Mini Demo
 # =========================
