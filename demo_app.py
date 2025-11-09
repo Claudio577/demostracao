@@ -31,7 +31,6 @@ def crop_white_borders(img_path):
 # =====================================
 # 💼 SEÇÃO DE PORTFÓLIO PROFISSIONAL — (NO TOPO)
 # =====================================
-st.markdown("---")
 st.markdown("## Portfólio Profissional — *Claudio Hideki Yoshida*")
 st.markdown("""
 Sou **estudante e desenvolvedor na área de Inteligência Artificial aplicada (Machine Learning)**,  
@@ -216,7 +215,6 @@ with col_conclusoes:
 # =====================================
 # 📞 CONTATO — (Rodapé)
 # =====================================
-st.markdown("---")
 st.markdown("### 📩 **Contato**")
 st.markdown("""
 - **E-mail:** [claudio.y@hotmail.com](mailto:claudio.y@hotmail.com)  
