@@ -211,3 +211,15 @@ with col_conclusoes:
     - Geração de **recomendações personalizadas** para o usuário;  
     - Integração com **painéis para educadores e mentores**.  
     """)
+
+
+# =====================================
+# 📞 CONTATO — (Rodapé)
+# =====================================
+st.markdown("---")
+st.markdown("### 📩 **Contato**")
+st.markdown("""
+- **E-mail:** [claudio.y@hotmail.com](mailto:claudio.y@hotmail.com)  
+- **WhatsApp:** [ (11) 98636-4794 ](https://wa.me/5511986364794)
+""")
+st.caption("© 2025 — Projeto EduFin AI Cloud | Desenvolvido por Claudio Hideki Yoshida 💡")
