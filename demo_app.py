@@ -11,39 +11,6 @@ st.set_page_config(
 )
 
 # =====================================
-# 🎨 ESTILO GLOBAL — CENTRALIZAÇÃO E ESPAÇAMENTO
-# =====================================
-st.markdown("""
-<style>
-body {
-    background-color: #f8f9fb;
-    color: #222;
-    font-family: 'Poppins', sans-serif;
-}
-header, [data-testid="stHeader"] {
-    display: none;
-}
-.main-container {
-    background: white;
-    padding: 2rem 3rem;
-    border-radius: 14px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-    width: 85%;
-    margin: 2rem auto;
-}
-.center-text {
-    text-align: center;
-}
-img {
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    margin-top: 0.8rem;
-    margin-bottom: 1.2rem;
-}
-</style>
-""", unsafe_allow_html=True)
-
-# =====================================
 # 🧩 FUNÇÃO AUXILIAR — CORTAR BORDAS BRANCAS
 # =====================================
 def crop_white_borders(img_path):
@@ -60,15 +27,11 @@ def crop_white_borders(img_path):
         st.error(f"Erro: Imagem não encontrada em {img_path}.")
         return None
 
-# ======================================================
-# BLOCO PRINCIPAL — CONTEÚDO CENTRALIZADO
-# ======================================================
-st.markdown('<div class="main-container">', unsafe_allow_html=True)
 
 # =====================================
 # 💼 SEÇÃO DE PORTFÓLIO PROFISSIONAL — (NO TOPO)
 # =====================================
-st.markdown("<h2 class='center-text'>Portfólio Profissional — <i>Claudio Hideki Yoshida</i></h2>", unsafe_allow_html=True)
+st.markdown("## Portfólio Profissional — *Claudio Hideki Yoshida*")
 st.markdown("""
 Sou **estudante e desenvolvedor na área de Inteligência Artificial aplicada (Machine Learning)**,  
 atualmente atuando em projetos de **IA Educacional, FinTech e Blockchain Inteligente**.
@@ -93,7 +56,8 @@ Python · Streamlit · TensorFlow · Scikit-Learn · Firebase · FastAPI · Pand
 # CABEÇALHO PRINCIPAL E INTRODUÇÃO
 # =====================================
 with st.container():
-    st.markdown("<h1 class='center-text' style='color:#4B7BE5;'>EduFin AI Cloud — Inteligência Financeira com IA</h1>", unsafe_allow_html=True)
+    st.title(":blue[EduFin AI Cloud] — Inteligência Financeira com IA")
+
     st.markdown("""
     O **EduFin AI Cloud** é um aplicativo educativo que une **educação financeira** e **inteligência artificial (IA)**.  
     Ele foi criado para ajudar pessoas a **entenderem sua situação financeira** e **aprenderem a tomar melhores decisões com base em dados**.
@@ -109,6 +73,7 @@ with st.container():
         Com o EduFin, o objetivo é trazer esses conceitos para o **cotidiano de forma simples, visual e interativa**.
         """)
 
+
 # =====================================
 # IMAGEM DE LOGIN — Layout Centralizado
 # =====================================
@@ -120,15 +85,19 @@ if login_img is not None:
     h_size = int(float(login_img.size[1]) * w_percent)
     login_img = login_img.resize((base_width, h_size), Image.Resampling.LANCZOS)
 
-    st.markdown("<div class='center-text'>", unsafe_allow_html=True)
-    st.subheader(":green[Login] — Interface Aprimorada")
-    st.image(login_img, use_column_width=False)
-    st.caption("Interface de autenticação aprimorada — simples, acessível e moderna.")
-    st.markdown("</div>", unsafe_allow_html=True)
+    col1_login, col2_login, col3_login = st.columns([1, 2, 1])
+
+    st.write("") 
+    with col2_login:
+        st.subheader(":green[Login] — Interface Aprimorada")
+        st.image(login_img, use_column_width='always')
+        st.caption("Interface de autenticação aprimorada — simples, acessível e moderna.")
+
 
 # =====================================
 # DEMONSTRAÇÃO DO ÍNDICE DE SAÚDE FINANCEIRA
 # =====================================
+st.write("")
 st.header(":red[Demonstração do Índice de Saúde Financeira]")
 st.write("O sistema fornece um feedback imediato com base na sua situação, usando cores para indicar o nível de saúde financeira.")
 
@@ -148,6 +117,8 @@ with col_alta:
     st.markdown("#### :green[Alta Saúde Financeira]")
     st.metric(label="Risco Baixo", value="95%", delta="+10% (Excelente)", delta_color="normal")
     st.write("Parabéns: Seu equilíbrio financeiro é excelente! Foque em estratégias de investimento de longo prazo.")
+    
+st.write("")
 
 # =====================================
 # SEÇÕES 1, 2 E 3 — Layout de "Cartões" em 3 Colunas
@@ -179,6 +150,8 @@ with col_design:
     Cores, ícones e controles deslizantes tornam o uso **leve e intuitivo**, incentivando o usuário a testar diferentes cenários.
     """)
 
+st.write("")
+
 # =====================================
 # SEÇÃO 4 — SIMULAÇÃO INTERATIVA
 # =====================================
@@ -205,9 +178,11 @@ with col_img_calc:
         h_size = int(float(calc_img.size[1]) * w_percent)
         calc_img = calc_img.resize((base_width, h_size), Image.Resampling.LANCZOS)
         
-        st.markdown("<div class='center-text'>", unsafe_allow_html=True)
-        st.image(calc_img, caption="Tela de Simulação — EduFin AI Cloud", use_column_width=False)
-        st.markdown("</div>", unsafe_allow_html=True)
+        _, col_center, _ = st.columns([1, 4, 1]) 
+        with col_center:
+            st.image(calc_img, caption="Tela de Simulação — EduFin AI Cloud", use_column_width='always')
+
+st.write("")
 
 # =====================================
 # SEÇÃO 5 E 6 — OBJETIVO E CONCLUSÕES
@@ -236,16 +211,13 @@ with col_conclusoes:
     - Integração com **painéis para educadores e mentores**.  
     """)
 
+
 # =====================================
 # 📞 CONTATO — (Rodapé)
 # =====================================
-st.markdown("<div class='center-text'>", unsafe_allow_html=True)
 st.markdown("### 📩 **Contato**")
 st.markdown("""
 - **E-mail:** [claudio.y@hotmail.com](mailto:claudio.y@hotmail.com)  
 - **WhatsApp:** [ (11) 98636-4794 ](https://wa.me/5511986364794)
 """)
 st.caption("© 2025 — Projeto EduFin AI Cloud | Desenvolvido por Claudio Hideki Yoshida 💡")
-st.markdown("</div>", unsafe_allow_html=True)
-
-st.markdown('</div>', unsafe_allow_html=True)
